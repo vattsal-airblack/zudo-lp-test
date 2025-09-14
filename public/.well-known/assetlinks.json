@@ -1,0 +1,16 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.zudo",
+      "sha256_cert_fingerprints": [
+        "E2:93:6F:F9:8D:85:67:EA:14:E8:1A:ED:1C:9E:3F:8E:52:8C:7C:2F:45:19:59:89:BA:F6:0C:8B:A6:FD:7B:E3",
+        "5F:44:65:30:0D:33:0C:B4:53:D3:01:10:F4:01:DF:B2:1A:7D:D8:EA:51:96:B1:07:C1:F8:9B:F1:3C:CC:80:2C",
+        "CB:4F:84:4E:EF:BB:38:46:0E:B6:07:D1:6B:86:9D:20:68:42:CE:60:69:CB:92:0F:28:36:EE:3E:FD:18:AA:19"
+      ]
+    }
+  }
+]
