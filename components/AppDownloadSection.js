@@ -117,36 +117,38 @@ const AppDownloadSection = ({ onAppStoreClick, onGooglePlayClick }) => {
                 left: '73px'
               }}
             >
-              <h1 className="font-instrument-serif text-white text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="font-instrument-serif text-white text-5xl lg:text-[60px] font-bold leading-tight">
                 The Journey Starts Here
               </h1>
             </div>
             
             {/* Subtitle */}
-            <div className="mt-32">
-              <p className="font-inter text-white text-lg lg:text-xl leading-relaxed max-w-md">
+            <div className="mt-16">
+              <p className="font-inter text-white text-lg lg:text-2xl leading-relaxed max-w-md">
                 One app. Thousands of passions.<br />
                 All you need is <span className="font-bold">15 minutes a day</span>.
               </p>
             </div>
             
             {/* App Store Buttons */}
-            <div className="mt-12 flex space-x-6 z-20 relative">
-              <button onClick={onGooglePlayClick}>
+            <div className="mt-16 flex space-x-4 sm:space-x-6 md:space-x-8 z-20 relative">
+              <button onClick={onGooglePlayClick} className="transition-transform duration-300 hover:scale-105">
                 <Image
                   src="/images/play-store.png"
                   alt="Get it on Google Play"
                   width={140}
                   height={45}
+                  className="w-[120px] h-[38px] sm:w-[130px] sm:h-[42px] md:w-[140px] md:h-[45px] lg:w-[200px] lg:h-[64px]"
                 />
               </button>
               
-              <button onClick={onAppStoreClick}>
+              <button onClick={onAppStoreClick} className="transition-transform duration-300 hover:scale-105">
                 <Image
                   src="/images/apple-store.png"
                   alt="Coming soon on App Store"
                   width={140}
                   height={45}
+                  className="w-[120px] h-[38px] sm:w-[130px] sm:h-[42px] md:w-[140px] md:h-[45px] lg:w-[200px] lg:h-[64px]"
                 />
               </button>
             </div>

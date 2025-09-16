@@ -43,6 +43,75 @@ const CoursesHeaderSection = () => {
       category: "Category",
       image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600549/zudo/website/Course_Thumbnail_-_5_a99mnt.png",
       description: "Course description for thumbnail 5"
+    },
+    {
+      id: 6,
+      title: "AM SE PAISE KAMAYE",
+      category: "Business",
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600548/zudo/website/Course_Thumbnail_-_1_iov7r4.png",
+      description: "Learn how to earn money from social media"
+    },
+    {
+      id: 7,
+      title: "Bengali BRIDAL LOOK",
+      category: "Beauty",
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600548/zudo/website/Course_Thumbnail_-_2_x3lq8u.png",
+      description: "Master the art of traditional Bengali bridal makeup"
+    },
+    {
+      id: 8,
+      title: "Artifi Jewell BUSINESS LAUNCH K",
+      category: "Business",
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600548/zudo/website/Course_Thumbnail_-_3_wl7soz.png",
+      description: "Launch your artificial jewelry business successfully"
+    },
+    {
+      id: 9,
+      title: "Course Title 4",
+      category: "Category",
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600549/zudo/website/Course_Thumbnail_-_4_kfnul6.png",
+      description: "Course description for thumbnail 4"
+    },
+    {
+      id: 10,
+      title: "Course Title 5",
+      category: "Category",
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600549/zudo/website/Course_Thumbnail_-_5_a99mnt.png",
+      description: "Course description for thumbnail 5"
+    },{
+      id: 11,
+      title: "AM SE PAISE KAMAYE",
+      category: "Business",
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600548/zudo/website/Course_Thumbnail_-_1_iov7r4.png",
+      description: "Learn how to earn money from social media"
+    },
+    {
+      id: 12,
+      title: "Bengali BRIDAL LOOK",
+      category: "Beauty",
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600548/zudo/website/Course_Thumbnail_-_2_x3lq8u.png",
+      description: "Master the art of traditional Bengali bridal makeup"
+    },
+    {
+      id: 13,
+      title: "Artifi Jewell BUSINESS LAUNCH K",
+      category: "Business",
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600548/zudo/website/Course_Thumbnail_-_3_wl7soz.png",
+      description: "Launch your artificial jewelry business successfully"
+    },
+    {
+      id: 14,
+      title: "Course Title 4",
+      category: "Category",
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600549/zudo/website/Course_Thumbnail_-_4_kfnul6.png",
+      description: "Course description for thumbnail 4"
+    },
+    {
+      id: 15,
+      title: "Course Title 5",
+      category: "Category",
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600549/zudo/website/Course_Thumbnail_-_5_a99mnt.png",
+      description: "Course description for thumbnail 5"
     }
   ];
 
@@ -176,7 +245,7 @@ const CoursesHeaderSection = () => {
         </div>
 
         {/* Desktop Header */}
-        <div className="hidden md:flex items-center justify-center py-16">
+        <div className="hidden md:flex items-center justify-center pt-8">
           <div className="relative flex items-center justify-center w-full max-w-4xl px-12">
             <div>
               <div className="flex items-center gap-3 mb-6">
@@ -328,29 +397,118 @@ const CoursesHeaderSection = () => {
 
         {/* Desktop Thumbnail Section */}
         <div className="hidden md:block">
-          <div className="relative w-full">
-            <div 
-              className="relative flex justify-center items-center h-[400px] w-full"
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-              onTouchEnd={handleTouchEnd}
-              onMouseDown={handleMouseDown}
-              onMouseMove={handleMouseMove}
-              onMouseUp={handleMouseUp}
-              onMouseLeave={() => setIsDragging(false)}
-              style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
-            >
-              {/* Left Side Images (decreasing sizes) */}
+          <div className="relative w-full flex justify-center">
+            <div className="relative w-[80%] max-w-7xl">
+              {/* Left Arrow */}
+              <button
+                onClick={() => {
+                  prevImage();
+                  setIsAutoPlaying(false);
+                  setTimeout(() => setIsAutoPlaying(true), 5000);
+                }}
+                className="absolute left-10 top-1/2 transform -translate-y-1/2 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-3 transition-all duration-300 hover:scale-110"
+                aria-label="Previous image"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="text-white"
+                >
+                  <path
+                    d="M15 18L9 12L15 6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+
+              {/* Right Arrow */}
+              <button
+                onClick={() => {
+                  nextImage();
+                  setIsAutoPlaying(false);
+                  setTimeout(() => setIsAutoPlaying(true), 5000);
+                }}
+                className="absolute right-10 top-1/2 transform -translate-y-1/2 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-3 transition-all duration-300 hover:scale-110"
+                aria-label="Next image"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="text-white"
+                >
+                  <path
+                    d="M9 18L15 12L9 6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+
+              <div 
+                className="relative flex justify-center items-center h-[60vh] min-h-[400px] max-h-[600px] w-full"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+                onMouseDown={handleMouseDown}
+                onMouseMove={handleMouseMove}
+                onMouseUp={handleMouseUp}
+                onMouseLeave={() => setIsDragging(false)}
+                style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+              >
+              {/* Far Left Image */}
               <div 
                 className="absolute cursor-pointer transition-all duration-300"
                 style={{
-                  width: '140px',
-                  height: '186px',
+                  width: 'clamp(150px, 10vw, 180px)',
+                  height: 'clamp(200px, 13.5vw, 240px)',
                   top: '50%',
-                  left: '50%',
-                  transform: 'translate(-50%, -50%) translateX(-320px)',
+                  left: '10%',
+                  transform: 'translateY(-50%)',
                   opacity: 0.3,
-                  borderRadius: '8px',
+                  borderRadius: '12px',
+                  zIndex: 1
+                }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  if (!isDragging) {
+                    prevImage();
+                    setIsAutoPlaying(false);
+                    setTimeout(() => setIsAutoPlaying(true), 5000);
+                  }
+                }}
+              >
+                <div className="relative w-full h-full overflow-hidden rounded-[12px]">
+                  <Image
+                    src={courseThumbnails[activeIndex > 1 ? activeIndex - 2 : (activeIndex - 2 + courseThumbnails.length) % courseThumbnails.length].image}
+                    alt={courseThumbnails[activeIndex > 1 ? activeIndex - 2 : (activeIndex - 2 + courseThumbnails.length) % courseThumbnails.length].title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Left Image */}
+              <div 
+                className="absolute cursor-pointer transition-all duration-300"
+                style={{
+                  width: 'clamp(160px, 12vw, 220px)',
+                  height: 'clamp(213px, 16vw, 293px)',
+                  top: '50%',
+                  left: '25%',
+                  transform: 'translateY(-50%)',
+                  opacity: 0.5,
+                  borderRadius: '14px',
                   zIndex: 2
                 }}
                 onClick={(e) => {
@@ -362,38 +520,7 @@ const CoursesHeaderSection = () => {
                   }
                 }}
               >
-                <div className="relative w-full h-full overflow-hidden rounded-[8px]">
-                  <Image
-                    src={courseThumbnails[activeIndex > 1 ? activeIndex - 2 : (activeIndex - 2 + courseThumbnails.length) % courseThumbnails.length].image}
-                    alt={courseThumbnails[activeIndex > 1 ? activeIndex - 2 : (activeIndex - 2 + courseThumbnails.length) % courseThumbnails.length].title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-
-              <div 
-                className="absolute cursor-pointer transition-all duration-300"
-                style={{
-                  width: '160px',
-                  height: '213px',
-                  top: '50%',
-                  left: '50%',
-                  transform: 'translate(-50%, -50%) translateX(-240px)',
-                  opacity: 0.4,
-                  borderRadius: '10px',
-                  zIndex: 3
-                }}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  if (!isDragging) {
-                    prevImage();
-                    setIsAutoPlaying(false);
-                    setTimeout(() => setIsAutoPlaying(true), 5000);
-                  }
-                }}
-              >
-                <div className="relative w-full h-full overflow-hidden rounded-[10px]">
+                <div className="relative w-full h-full overflow-hidden rounded-[14px]">
                   <Image
                     src={courseThumbnails[activeIndex > 0 ? activeIndex - 1 : courseThumbnails.length - 1].image}
                     alt={courseThumbnails[activeIndex > 0 ? activeIndex - 1 : courseThumbnails.length - 1].title}
@@ -407,13 +534,13 @@ const CoursesHeaderSection = () => {
               <div 
                 className="absolute cursor-pointer transition-all duration-300"
                 style={{
-                  width: '171.77px',
-                  height: '228.38px',
+                  width: 'clamp(180px, 14vw, 250px)',
+                  height: 'clamp(240px, 18.5vw, 333px)',
                   top: '50%',
                   left: '50%',
                   transform: 'translate(-50%, -50%)',
                   opacity: 1,
-                  borderRadius: '11.63px',
+                  borderRadius: '16px',
                   zIndex: 5
                 }}
                 onClick={(e) => {
@@ -423,7 +550,7 @@ const CoursesHeaderSection = () => {
                   }
                 }}
               >
-                <div className="relative w-full h-full overflow-hidden rounded-[11.63px]">
+                <div className="relative w-full h-full overflow-hidden rounded-[16px]">
                   <Image
                     src={courseThumbnails[activeIndex].image}
                     alt={courseThumbnails[activeIndex].title}
@@ -434,48 +561,17 @@ const CoursesHeaderSection = () => {
                 </div>
               </div>
 
-              {/* Right Side Images (decreasing sizes) */}
+              {/* Right Image */}
               <div 
                 className="absolute cursor-pointer transition-all duration-300"
                 style={{
-                  width: '160px',
-                  height: '213px',
+                  width: 'clamp(160px, 12vw, 220px)',
+                  height: 'clamp(213px, 16vw, 293px)',
                   top: '50%',
-                  left: '50%',
-                  transform: 'translate(-50%, -50%) translateX(240px)',
-                  opacity: 0.4,
-                  borderRadius: '10px',
-                  zIndex: 3
-                }}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  if (!isDragging) {
-                    nextImage();
-                    setIsAutoPlaying(false);
-                    setTimeout(() => setIsAutoPlaying(true), 5000);
-                  }
-                }}
-              >
-                <div className="relative w-full h-full overflow-hidden rounded-[10px]">
-                  <Image
-                    src={courseThumbnails[activeIndex < courseThumbnails.length - 1 ? activeIndex + 1 : 0].image}
-                    alt={courseThumbnails[activeIndex < courseThumbnails.length - 1 ? activeIndex + 1 : 0].title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-
-              <div 
-                className="absolute cursor-pointer transition-all duration-300"
-                style={{
-                  width: '140px',
-                  height: '186px',
-                  top: '50%',
-                  left: '50%',
-                  transform: 'translate(-50%, -50%) translateX(320px)',
-                  opacity: 0.3,
-                  borderRadius: '8px',
+                  right: '25%',
+                  transform: 'translateY(-50%)',
+                  opacity: 0.5,
+                  borderRadius: '14px',
                   zIndex: 2
                 }}
                 onClick={(e) => {
@@ -487,7 +583,39 @@ const CoursesHeaderSection = () => {
                   }
                 }}
               >
-                <div className="relative w-full h-full overflow-hidden rounded-[8px]">
+                <div className="relative w-full h-full overflow-hidden rounded-[14px]">
+                  <Image
+                    src={courseThumbnails[activeIndex < courseThumbnails.length - 1 ? activeIndex + 1 : 0].image}
+                    alt={courseThumbnails[activeIndex < courseThumbnails.length - 1 ? activeIndex + 1 : 0].title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Far Right Image */}
+              <div 
+                className="absolute cursor-pointer transition-all duration-300"
+                style={{
+                  width: 'clamp(150px, 10vw, 180px)',
+                  height: 'clamp(200px, 13.5vw, 240px)',
+                  top: '50%',
+                  right: '10%',
+                  transform: 'translateY(-50%)',
+                  opacity: 0.3,
+                  borderRadius: '12px',
+                  zIndex: 1
+                }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  if (!isDragging) {
+                    nextImage();
+                    setIsAutoPlaying(false);
+                    setTimeout(() => setIsAutoPlaying(true), 5000);
+                  }
+                }}
+              >
+                <div className="relative w-full h-full overflow-hidden rounded-[12px]">
                   <Image
                     src={courseThumbnails[activeIndex < courseThumbnails.length - 2 ? activeIndex + 2 : (activeIndex + 2) % courseThumbnails.length].image}
                     alt={courseThumbnails[activeIndex < courseThumbnails.length - 2 ? activeIndex + 2 : (activeIndex + 2) % courseThumbnails.length].title}
@@ -497,6 +625,7 @@ const CoursesHeaderSection = () => {
                 </div>
               </div>
 
+              </div>
             </div>
           </div>
         </div>
@@ -527,22 +656,22 @@ const CoursesHeaderSection = () => {
         </div>
 
         {/* Desktop Feature Cards */}
-        <div className="hidden md:block">
-          <div className="relative w-full py-8">
-            <div className="flex justify-center items-center gap-[5.46px]">
+        <div className="hidden md:block -mt-10 mb-10">
+          <div className="relative w-full">
+            <div className="flex justify-center items-center gap-[8px] md:gap-[10px] lg:gap-[12px] xl:gap-[14px] 2xl:gap-[16px]">
               <Image
                 src="/images/15-min-logo.png"
                 alt="Duration Icon"
                 width={141.92}
                 height={71.49}
-                className="object-contain"
+                className="object-contain w-[180px] h-[90px] md:w-[200px] md:h-[100px] lg:w-[220px] lg:h-[110px] xl:w-[220px] xl:h-[100px]"
               />
               <Image
                 src="/images/language-icon.png"
                 alt="Language Icon"
                 width={141.92}
                 height={71.49}
-                className="object-contain"
+                className="object-contain w-[180px] h-[90px] md:w-[200px] md:h-[100px] lg:w-[220px] lg:h-[110px] xl:w-[220px] xl:h-[100px]"
               />
             </div>
           </div>

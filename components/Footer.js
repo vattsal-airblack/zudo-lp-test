@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="relative w-full mt-8">
       {/* Rays Effect - Exact SVG from Figma */}
-      <div className="relative w-full h-32 overflow-hidden">
+      <div className="relative w-full h-32 md:h-40 lg:h-48 overflow-hidden">
         <svg 
           width="100%" 
           height="118" 
@@ -156,33 +156,33 @@ const Footer = () => {
         background: 'radial-gradient(circle at 50% 0%, rgba(28, 28, 36, 1) 0%, rgba(9, 9, 13, 1) 95%)',
         borderImage: 'radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 1) 5%, rgba(255, 90, 31, 0.94) 58%, rgba(255, 90, 31, 0) 100%) 1'
       }}>
-        <div className="px-6 py-12 md:px-12 md:py-16">
-          <div className="flex flex-col items-center space-y-6">
+        <div className="px-6 py-12 md:px-12 md:py-16 lg:px-16 lg:py-20">
+          <div className="flex flex-col items-center space-y-6 md:space-y-8 lg:space-y-10">
             {/* Logo and Brand */}
-            <div className="flex flex-col items-center space-y-4">
+            <div className="flex flex-col items-center space-y-4 md:space-y-6 lg:space-y-8">
               {/* Zudo Logo - Same as Navigation */}
               <div className="flex items-center justify-center">
-                <div className="relative w-[83px] h-[31px]">
+                <div className="relative w-[83px] h-[31px] md:w-[100px] md:h-[37px] lg:w-[120px] lg:h-[45px]">
                   <Image
                     src="/images/zudo-logo.svg"
                     alt="Zudo Logo"
                     width={83}
                     height={31}
-                    className="object-contain"
+                    className="object-contain w-full h-full"
                     priority
                   />
                 </div>
               </div>
               
               {/* Tagline */}
-              <div className="text-center text-white/90 font-inter text-base leading-relaxed">
+              <div className="text-center text-white/90 font-inter text-base md:text-lg lg:text-xl leading-relaxed">
                 Made with ❤️ in India,<br />
                 for creators and builders
               </div>
             </div>
             
             {/* Navigation Links */}
-            <div className="flex items-center space-x-4 text-text-tertiary font-inter text-sm">
+            <div className="flex items-center space-x-4 md:space-x-6 text-text-tertiary font-inter text-sm md:text-base">
               <a href="#" className="hover:text-white transition-colors duration-200">About</a>
               <span className="text-text-tertiary/50">|</span>
               <a href="#" className="hover:text-white transition-colors duration-200">FAQs</a>
