@@ -1,5 +1,7 @@
 import { useEffect } from "react";
+import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import localFont from "next/font/local";
 
 const geistSans = localFont({
@@ -14,15 +16,41 @@ const geistMono = localFont({
 });
 
 export default function Home() {
+  const router = useRouter();
 
   useEffect(() => {
-      window.location.href = 'https://play.google.com/store/apps/details?id=com.zudo';
+      // For external URLs, use window.open to open in new tab
+      window.open('https://play.google.com/store/apps/details?id=com.zudo', '_blank');
   }, []);
 
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
+    <>
+      <Head>
+        <title>Course Categories - Zudo | Explore 1000+ Premium Courses</title>
+        <meta name="description" content="Explore Zudo's course categories including Instagram growth, YouTube earnings, beauty, fashion, business, and more. 1000+ premium courses by real experts." />
+        <meta name="keywords" content="course categories, Instagram courses, YouTube courses, beauty courses, business courses, fashion courses, online learning categories" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Course Categories - Zudo" />
+        <meta property="og:description" content="Explore Zudo's course categories including Instagram growth, YouTube earnings, beauty, fashion, business, and more." />
+        <meta property="og:url" content="https://zudoapp.com/category" />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter */}
+        <meta property="twitter:title" content="Course Categories - Zudo" />
+        <meta property="twitter:description" content="Explore Zudo's course categories including Instagram growth, YouTube earnings, beauty, fashion, business, and more." />
+        
+        {/* Canonical */}
+        <link rel="canonical" href="https://zudoapp.com/category" />
+        
+        {/* Additional Meta */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Zudo" />
+      </Head>
+      
+      <div
+        className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
+      >
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start text-center sm:text-left">
         <h1 className="text-2xl font-bold">Welcome to Zudo</h1>
         <p className="text-lg">Download the Zudo Android app for more information.</p>
@@ -33,6 +61,7 @@ export default function Home() {
           Click here to download
         </a>
       </main>
-    </div>
+      </div>
+    </>
   );
 }

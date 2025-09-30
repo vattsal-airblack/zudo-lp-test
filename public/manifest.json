@@ -1,0 +1,36 @@
+{
+  "name": "Zudo - India's Largest Learning App for Creators & Builders",
+  "short_name": "Zudo",
+  "description": "Join 10+ lakh learners on Zudo! Learn from real experts with 1000+ bite-sized courses on Instagram growth, YouTube earnings, home businesses & more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#9333ea",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/zudo-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/zudo-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "lifestyle", "productivity"],
+  "lang": "en-IN",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.zudo",
+      "id": "com.zudo"
+    }
+  ]
+}

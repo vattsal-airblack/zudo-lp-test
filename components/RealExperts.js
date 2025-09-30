@@ -1,5 +1,31 @@
 import { useState, useEffect, useRef } from 'react';
+import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
+
+// Lazy Video Component
+const LazyVideo = ({ src, alt, className, style }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true
+  });
+
+  return (
+    <div ref={ref} className={className} style={style}>
+      {inView ? (
+        <video
+          src={src}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        />
+      ) : (
+        <div className="w-full h-full bg-gray-800 animate-pulse" />
+      )}
+    </div>
+  );
+};
 
 const RealExperts = () => {
   const [scrollPosition1, setScrollPosition1] = useState(0);
@@ -9,23 +35,71 @@ const RealExperts = () => {
   const scrollRef2 = useRef(null);
   const desktopScrollRef = useRef(null);
 
-  // Video thumbnail data
+  // Video data
   const videoThumbnails = [
     {
       id: 1,
-      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757650707/zudo/website/v1_giq3zb.png"
+      video: "https://res.cloudinary.com/dtks0l86r/video/upload/v1759228516/zudo/website/1_dxl75h.mp4"
     },
     {
       id: 2,
-      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757650707/zudo/website/v2_lojlbc.png"
+      video: "https://res.cloudinary.com/dtks0l86r/video/upload/v1759228520/zudo/website/2_okxens.mp4"
     },
     {
       id: 3,
-      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757650707/zudo/website/v3_akeeyg.png"
+      video: "https://res.cloudinary.com/dtks0l86r/video/upload/v1759228537/zudo/website/3_qxwm8y.mp4"
+    },
+    {
+      id: 4,
+      video: "https://res.cloudinary.com/dtks0l86r/video/upload/v1759228538/zudo/website/4_g2jiiz.mp4"
+    },
+    {
+      id: 5,
+      video: "https://res.cloudinary.com/dtks0l86r/video/upload/v1759228532/zudo/website/5_aujfy2.mp4"
+    },
+    {
+      id: 6,
+      video: "https://res.cloudinary.com/dtks0l86r/video/upload/v1759228539/zudo/website/6_huqzl0.mp4"
+    },
+    {
+      id: 7,
+      video: "https://res.cloudinary.com/dtks0l86r/video/upload/v1759228505/zudo/website/7_nramxo.mp4"
+    },
+    {
+      id: 8,
+      video: "https://res.cloudinary.com/dtks0l86r/video/upload/v1759228509/zudo/website/8_w4ueml.mp4"
+    },
+    {
+      id: 9,
+      video: "https://res.cloudinary.com/dtks0l86r/video/upload/v1759228544/zudo/website/9_wmygi3.mp4"
+    },
+    {
+      id: 10,
+      video: "https://res.cloudinary.com/dtks0l86r/video/upload/v1759228530/zudo/website/10_dqw1gl.mp4"
+    },
+    {
+      id: 11,
+      video: "https://res.cloudinary.com/dtks0l86r/video/upload/v1759228535/zudo/website/11_kelppy.mp4"
+    },
+    {
+      id: 12,
+      video: "https://res.cloudinary.com/dtks0l86r/video/upload/v1759228512/zudo/website/12_kcww5x.mp4"
+    },
+    {
+      id: 13,
+      video: "https://res.cloudinary.com/dtks0l86r/video/upload/v1759228522/zudo/website/13_oprsbu.mp4"
+    },
+    {
+      id: 14,
+      video: "https://res.cloudinary.com/dtks0l86r/video/upload/v1759228533/zudo/website/14_mlfptw.mp4"
+    },
+    {
+      id: 15,
+      video: "https://res.cloudinary.com/dtks0l86r/video/upload/v1759228525/zudo/website/15_xi1ikk.mp4"
     }
   ];
 
-  // Create arrays with 10 images each for mobile rows
+  // Create arrays with 10 videos each for mobile rows
   const mobileRow1 = Array(10).fill(videoThumbnails).flat();
   const mobileRow2 = Array(10).fill(videoThumbnails).flat();
   const desktopRow = Array(10).fill(videoThumbnails).flat();
@@ -174,11 +248,10 @@ const RealExperts = () => {
                 {mobileRow1.map((video, index) => (
                   <div key={`row1-${index}`} className="flex-shrink-0" style={{ width: '160px', height: '311.2603454589844px' }}>
                     <div className="relative w-full h-full rounded-lg overflow-hidden">
-                      <Image
-                        src={video.image}
+                      <LazyVideo
+                        src={video.video}
                         alt="Video thumbnail"
-                        fill
-                        className="object-cover"
+                        className="w-full h-full"
                       />
                     </div>
                   </div>
@@ -195,11 +268,10 @@ const RealExperts = () => {
                 {mobileRow2.map((video, index) => (
                   <div key={`row2-${index}`} className="flex-shrink-0" style={{ width: '160px', height: '311.2603454589844px' }}>
                     <div className="relative w-full h-full rounded-lg overflow-hidden">
-                      <Image
-                        src={video.image}
+                      <LazyVideo
+                        src={video.video}
                         alt="Video thumbnail"
-                        fill
-                        className="object-cover"
+                        className="w-full h-full"
                       />
                     </div>
                   </div>
@@ -219,11 +291,10 @@ const RealExperts = () => {
               {desktopRow.map((video, index) => (
                 <div key={`desktop-${index}`} className="flex-shrink-0" style={{ width: '260.06715393066406px', height: '400.2603454589844px' }}>
                   <div className="relative w-full h-full rounded-lg overflow-hidden">
-                    <Image
-                      src={video.image}
+                    <LazyVideo
+                      src={video.video}
                       alt="Video thumbnail"
-                      fill
-                      className="object-cover"
+                      className="w-full h-full"
                     />
                   </div>
                 </div>

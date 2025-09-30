@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const Navigation = ({ 
   variant = 'default', // 'default', 'transparent', 'solid'
@@ -9,6 +10,7 @@ const Navigation = ({
   onLogoClick = null 
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +37,15 @@ const Navigation = ({
     return 'border-b border-white/10';
   };
 
+  const handleLogoClick = () => {
+    if (onLogoClick) {
+      onLogoClick();
+    } else {
+      // Default behavior: navigate to home page
+      router.push('/');
+    }
+  };
+
   return (
     <motion.nav
       className={`
@@ -55,7 +66,7 @@ const Navigation = ({
           {/* Logo Container */}
           <motion.div
             className="flex items-center gap-[5.21px] cursor-pointer"
-            onClick={onLogoClick}
+            onClick={handleLogoClick}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}

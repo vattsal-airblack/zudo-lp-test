@@ -1,4 +1,9 @@
 const PlayStoreRating = () => {
+  const handlePlayStoreClick = () => {
+    // Open Google Play Store
+    window.open('https://play.google.com/store/apps/details?id=com.zudo', '_blank');
+  };
+
   return (
     <div className="flex flex-col items-center justify-center gap-3 md:gap-4 mt-8">
       {/* Stars */}
@@ -20,9 +25,10 @@ const PlayStoreRating = () => {
         ))}
       </div>
       
-      {/* Rating Text */}
-      <p 
-        className="text-white font-inter font-bold text-center text-md md:text-[24px]"
+      {/* Rating Text - Now Clickable */}
+      <button 
+        onClick={handlePlayStoreClick}
+        className="text-white font-inter font-bold text-center text-md md:text-[24px] hover:text-orange-400 transition-colors duration-200 cursor-pointer"
         // style={{
         //   fontSize: '18.09px',
         //   lineHeight: '100%',
@@ -30,7 +36,7 @@ const PlayStoreRating = () => {
         // }}
       >
         4.5/5 rated on Playstore
-      </p>
+      </button>
     </div>
   );
 };

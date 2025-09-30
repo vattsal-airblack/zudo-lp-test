@@ -81,6 +81,19 @@ const PhoneMockupSection = () => {
               className="object-contain"
               priority
             />
+            {/* Video inside iPhone screen */}
+            <div className="absolute top-[14px] left-[8px] w-[156px] h-[328px] rounded-[20px] overflow-hidden">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src="https://res.cloudinary.com/dtks0l86r/video/upload/v1759228541/zudo/website/New_video_website_3_nlz2jj.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
 
           {/* Auto-scrolling Categories */}
@@ -147,14 +160,29 @@ const PhoneMockupSection = () => {
 
           {/* iPhone Mockup - Centered */}
           <div className="relative z-10 flex justify-center">
-            <Image
-              src="/images/iphone-mockup.png"
-              alt="iPhone Mockup"
-              width={300}
-              height={600}
-              className="object-contain"
-              priority
-            />
+            <div className="relative">
+              <Image
+                src="/images/iphone-mockup.png"
+                alt="iPhone Mockup"
+                width={300}
+                height={600}
+                className="object-contain"
+                priority
+              />
+              {/* Video inside iPhone screen */}
+              <div className="absolute top-[25px] left-[14px] w-[272px] h-[570px] rounded-[35px] overflow-hidden">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                >
+                  <source src="https://res.cloudinary.com/dtks0l86r/video/upload/v1759228541/zudo/website/New_video_website_3_nlz2jj.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
           </div>
         </div>
       </div>

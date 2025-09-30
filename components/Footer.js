@@ -1,7 +1,18 @@
 import React from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const Footer = () => {
+  const router = useRouter();
+
+  const handleLogoClick = () => {
+    router.push('/');
+  };
+
+  const handleLinkClick = (path) => {
+    router.push(path);
+  };
+
   return (
     <footer className="relative w-full mt-8">
       {/* Rays Effect - Exact SVG from Figma */}
@@ -161,7 +172,7 @@ const Footer = () => {
             {/* Logo and Brand */}
             <div className="flex flex-col items-center space-y-4 md:space-y-6 lg:space-y-8">
               {/* Zudo Logo - Same as Navigation */}
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center cursor-pointer" onClick={handleLogoClick}>
                 <div className="relative w-[83px] h-[31px] md:w-[100px] md:h-[37px] lg:w-[120px] lg:h-[45px]">
                   <Image
                     src="/images/zudo-logo.svg"
@@ -183,13 +194,26 @@ const Footer = () => {
             
             {/* Navigation Links */}
             <div className="flex items-center space-x-4 md:space-x-6 text-text-tertiary font-inter text-sm md:text-base">
-              <a href="#" className="hover:text-white transition-colors duration-200">About</a>
+              <button 
+                onClick={() => handleLinkClick('/terms')} 
+                className="hover:text-white transition-colors duration-200 cursor-pointer"
+              >
+                Terms
+              </button>
               <span className="text-text-tertiary/50">|</span>
-              <a href="#" className="hover:text-white transition-colors duration-200">FAQs</a>
+              <button 
+                onClick={() => handleLinkClick('/privacy')} 
+                className="hover:text-white transition-colors duration-200 cursor-pointer"
+              >
+                Privacy
+              </button>
               <span className="text-text-tertiary/50">|</span>
-              <a href="#" className="hover:text-white transition-colors duration-200">Privacy</a>
-              <span className="text-text-tertiary/50">|</span>
-              <a href="#" className="hover:text-white transition-colors duration-200">Contact</a>
+              <button 
+                onClick={() => handleLinkClick('/contact')} 
+                className="hover:text-white transition-colors duration-200 cursor-pointer"
+              >
+                Contact
+              </button>
             </div>
           </div>
         </div>

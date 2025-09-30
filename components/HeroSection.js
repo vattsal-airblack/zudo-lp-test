@@ -149,7 +149,7 @@ const HeroSection = ({
               </div>
             ))}
           </div>
-          <span className="text-xs sm:text-sm md:text-base lg:text-lg font-medium">Trusted by 10 Lakh+ Indians 🇮🇳</span>
+          <span className="text-xs sm:text-sm md:text-base lg:text-lg font-medium">Trusted by 10 Lakh+ People 🇮🇳</span>
         </div>
 
       </div>

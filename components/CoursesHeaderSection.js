@@ -11,107 +11,73 @@ const CoursesHeaderSection = () => {
   const courseThumbnails = [
     {
       id: 1,
-      title: "AM SE PAISE KAMAYE",
-      category: "Business",
-      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600548/zudo/website/Course_Thumbnail_-_1_iov7r4.png",
-      description: "Learn how to earn money from social media"
+      title: "1000 Insta Followers Growth Tips",
+      category: "Instagram",
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1759235371/zudo/website/thumbnails/Instagram/Copy_of_1000_Insta_Followers_Growth_Tips_ikahcl.jpg",
+      description: "Learn proven strategies to grow your Instagram following"
     },
     {
       id: 2,
-      title: "Bengali BRIDAL LOOK",
-      category: "Beauty",
-      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600548/zudo/website/Course_Thumbnail_-_2_x3lq8u.png",
-      description: "Master the art of traditional Bengali bridal makeup"
+      title: "Pehla Insta Reel Kaise Banayein",
+      category: "Instagram",
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1759235370/zudo/website/thumbnails/Instagram/Copy_of_Pehla_Insta_Reel_Kaise_Banayein_sggdg3.jpg",
+      description: "Master the art of creating engaging Instagram Reels"
     },
     {
       id: 3,
-      title: "Artifi Jewell BUSINESS LAUNCH K",
-      category: "Business",
-      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600548/zudo/website/Course_Thumbnail_-_3_wl7soz.png",
-      description: "Launch your artificial jewelry business successfully"
+      title: "Mastering Makeup Basics",
+      category: "Beauty",
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1759235369/zudo/website/thumbnails/Beauty/Copy_of_Mastering_Makeup_Basics_reduced_b8wqks.png",
+      description: "Learn essential makeup techniques for beginners"
     },
     {
       id: 4,
-      title: "Course Title 4",
-      category: "Category",
-      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600549/zudo/website/Course_Thumbnail_-_4_kfnul6.png",
-      description: "Course description for thumbnail 4"
+      title: "Advanced Beauty Techniques",
+      category: "Beauty",
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1759235369/zudo/website/thumbnails/Beauty/Copy_of_221kb_-_Zudo_-_Airblack-32_emozol.jpg",
+      description: "Take your beauty skills to the next level"
     },
     {
       id: 5,
-      title: "Course Title 5",
-      category: "Category",
-      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600549/zudo/website/Course_Thumbnail_-_5_a99mnt.png",
-      description: "Course description for thumbnail 5"
+      title: "Business Growth Strategies",
+      category: "Business",
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1759235371/zudo/website/thumbnails/Business/Copy_of_fd161319-fd61-4a4f-9983-6d871469b968_zkicep.png",
+      description: "Scale your business with proven growth strategies"
     },
     {
       id: 6,
-      title: "AM SE PAISE KAMAYE",
+      title: "Chocolate Business Kaise Shuru Karein",
       category: "Business",
-      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600548/zudo/website/Course_Thumbnail_-_1_iov7r4.png",
-      description: "Learn how to earn money from social media"
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1759235369/zudo/website/thumbnails/Business/Copy_of_Copy_of_Chocolate_Business_Kaise_Shuru_Karein_uuempx.jpg",
+      description: "Start your own chocolate business from scratch"
     },
     {
       id: 7,
-      title: "Bengali BRIDAL LOOK",
-      category: "Beauty",
-      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600548/zudo/website/Course_Thumbnail_-_2_x3lq8u.png",
-      description: "Master the art of traditional Bengali bridal makeup"
+      title: "Basics of Tailoring",
+      category: "Fashion",
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1759235370/zudo/website/thumbnails/Fashion/Copy_of_Basics_of_Tailoring_aw8coj.jpg",
+      description: "Learn fundamental tailoring techniques"
     },
     {
       id: 8,
-      title: "Artifi Jewell BUSINESS LAUNCH K",
-      category: "Business",
-      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600548/zudo/website/Course_Thumbnail_-_3_wl7soz.png",
-      description: "Launch your artificial jewelry business successfully"
+      title: "Boutique Business Setup",
+      category: "Fashion",
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1759235369/zudo/website/thumbnails/Fashion/Copy_of_Boutique_business_kaise_set_up_karein__fxzaj4.jpg",
+      description: "Set up and run a successful boutique business"
     },
     {
       id: 9,
-      title: "Course Title 4",
-      category: "Category",
-      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600549/zudo/website/Course_Thumbnail_-_4_kfnul6.png",
-      description: "Course description for thumbnail 4"
+      title: "Mobile se Youtube Video Edit Kare",
+      category: "Youtube",
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1759235371/zudo/website/thumbnails/Youtube/Copy_of_Mobile_se_Youtube_Video_Edit_Kare_lrzmcp.jpg",
+      description: "Edit professional YouTube videos on your mobile"
     },
     {
       id: 10,
-      title: "Course Title 5",
-      category: "Category",
-      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600549/zudo/website/Course_Thumbnail_-_5_a99mnt.png",
-      description: "Course description for thumbnail 5"
-    },{
-      id: 11,
-      title: "AM SE PAISE KAMAYE",
-      category: "Business",
-      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600548/zudo/website/Course_Thumbnail_-_1_iov7r4.png",
-      description: "Learn how to earn money from social media"
-    },
-    {
-      id: 12,
-      title: "Bengali BRIDAL LOOK",
-      category: "Beauty",
-      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600548/zudo/website/Course_Thumbnail_-_2_x3lq8u.png",
-      description: "Master the art of traditional Bengali bridal makeup"
-    },
-    {
-      id: 13,
-      title: "Artifi Jewell BUSINESS LAUNCH K",
-      category: "Business",
-      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600548/zudo/website/Course_Thumbnail_-_3_wl7soz.png",
-      description: "Launch your artificial jewelry business successfully"
-    },
-    {
-      id: 14,
-      title: "Course Title 4",
-      category: "Category",
-      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600549/zudo/website/Course_Thumbnail_-_4_kfnul6.png",
-      description: "Course description for thumbnail 4"
-    },
-    {
-      id: 15,
-      title: "Course Title 5",
-      category: "Category",
-      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1757600549/zudo/website/Course_Thumbnail_-_5_a99mnt.png",
-      description: "Course description for thumbnail 5"
+      title: "Pehla Video Kaise Banaye",
+      category: "Youtube",
+      image: "https://res.cloudinary.com/dtks0l86r/image/upload/v1759235370/zudo/website/thumbnails/Youtube/Copy_of_Pehla_video_kaise_banaye_fpwttj.jpg",
+      description: "Create your first YouTube video like a pro"
     }
   ];
 
@@ -300,7 +266,7 @@ const CoursesHeaderSection = () => {
             >
               {/* Left Image */}
               <div 
-                className="absolute cursor-pointer transition-all duration-300"
+                className="absolute cursor-pointer transition-all duration-300 rounded-md"
                 style={{
                   width: '154px',
                   height: '206px',
@@ -332,7 +298,7 @@ const CoursesHeaderSection = () => {
 
               {/* Center Image (Highlighted) */}
               <div 
-                className="absolute cursor-pointer transition-all duration-300"
+                className="absolute cursor-pointer transition-all duration-300 rounded-md"
                 style={{
                   width: '200px',
                   height: '267px',
@@ -349,7 +315,7 @@ const CoursesHeaderSection = () => {
                   }
                 }}
               >
-                <div className="relative w-full h-full overflow-hidden">
+                <div className="relative w-full h-full overflow-hidden rounded-md">
                   <Image
                     src={courseThumbnails[activeIndex].image}
                     alt={courseThumbnails[activeIndex].title}

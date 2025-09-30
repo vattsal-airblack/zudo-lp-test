@@ -4,55 +4,87 @@ import ReviewCard from './ReviewCard';
 const StackedReviewCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Dummy review data
+  // Review data
   const reviews = [
     {
       id: 1,
-      name: "Pami shetty",
-      initial: "P",
+      name: "Saket Kumar Vishwakarma",
+      initial: "S",
       avatarColor: "bg-red-500",
-      date: "13 February 2025",
-      text: "Dear Airblack, My name is Pramila Shetty and i an writing to express my gratitude for introducing me to the Zudo app. I must say the app seems to be a promising platform for all things related to beauty and makeup. From tips and tutorials to product reviews. I believe it will be a great learning experience and fun way to stay updated on the latest trends and techniques in the beauty industry. Thank you once again for introducing me to this wonderful app."
+      date: "16 September 2025",
+      text: "good experience I had a really good experience using the Zudo app. The interface is clean and easy to use, which makes navigation smooth. The features work well without any major glitches, and the response time is fast. I also liked the design and user-friendly layout. Overall, it feels reliable, convenient, and enjoyable to use."
     },
     {
       id: 2,
-      name: "Pooja Pradhan",
-      initial: "P",
+      name: "Sameer Rawlo",
+      initial: "S",
       avatarColor: "bg-blue-500",
-      date: "10 February 2025",
-      text: "I've been using Zudo for a few weeks now and I'm absolutely amazed by the quality of content. The beauty tutorials are so detailed and easy to follow. The instructors are knowledgeable and the app interface is user-friendly. Highly recommend to anyone interested in beauty and makeup!"
+      date: "9 August 2025",
+      text: "This app is really amazing and yes a new update has come in this app for one week ₹7 trial and we can learn anything by watching any video in 1 week and it will automatically cost 249 rupees one week and one thing is most important The best part is that we can cancel the payment as well."
     },
     {
       id: 3,
-      name: "Darshit Kumawat",
-      initial: "D",
+      name: "S Kiran",
+      initial: "S",
       avatarColor: "bg-green-500",
-      date: "8 February 2025",
-      text: "Zudo has completely transformed my understanding of beauty and makeup. The courses are comprehensive and the community is supportive. I've learned so many new techniques that I never knew existed. This app is a game-changer for anyone passionate about beauty!"
+      date: "25 June 2025",
+      text: "Amazing App – Learned So Much in Just One Day! This app is really good! I learned so many things in just one day. It's easy to use, helpful, and fun. If you're thinking about downloading it, just go for it – you won't regret it!"
     },
     {
       id: 4,
-      name: "Priya Sharma",
-      initial: "P",
+      name: "Saroj Kumar",
+      initial: "S",
       avatarColor: "bg-purple-500",
-      date: "5 February 2025",
-      text: "The variety of courses on Zudo is incredible! From basic makeup techniques to advanced beauty tips, there's something for everyone. The instructors are professional and the content is always up-to-date with the latest trends. Love this platform!"
+      date: "16 August 2025",
+      text: "watched youtube need more improvement. it's not sufficient for youtube course. you have to give valuable course content. There is many wrong ideas on Sikho App in youtube section. I have watched all videos of that section but many more videos are fraud type."
     },
     {
       id: 5,
-      name: "Rajesh Kumar",
-      initial: "R",
+      name: "Sanjay H.s",
+      initial: "S",
       avatarColor: "bg-orange-500",
-      date: "2 February 2025",
-      text: "As someone new to the beauty industry, Zudo has been an excellent learning platform. The step-by-step tutorials are easy to understand and the quality of instruction is top-notch. I've gained so much confidence in my skills!"
+      date: "10 September 2025",
+      text: "Full information to know everything about you wanna learn! fully satisfied 😁 with this amazing app.. try once❤️ worth to use it!"
     },
     {
       id: 6,
-      name: "Sneha Patel",
-      initial: "S",
+      name: "Aarti Vacchewad",
+      initial: "A",
       avatarColor: "bg-pink-500",
-      date: "30 January 2025",
-      text: "Zudo's beauty courses are simply outstanding! The instructors are experts in their field and the content is both educational and entertaining. I've learned so many new techniques and my makeup skills have improved dramatically. Highly recommend!"
+      date: "10 September 2025",
+      text: "arti mam bohot acchi teacher hai, she explained every make up step clearly and technicaly, so anyone can understand easily, I am happy with her teaching."
+    },
+    {
+      id: 7,
+      name: "Vijay Kumar",
+      initial: "V",
+      avatarColor: "bg-indigo-500",
+      date: "16 September 2025",
+      text: "1st episode went so well. will see next episode. but looks great I'm in correct place I think. thank you Zudo."
+    },
+    {
+      id: 8,
+      name: "Ajay Parmar",
+      initial: "A",
+      avatarColor: "bg-teal-500",
+      date: "28 August 2025",
+      text: "very simple trick and tips learn & reading for zudo good experience 👍🏻"
+    },
+    {
+      id: 9,
+      name: "Reubenmate Reubenmate",
+      initial: "R",
+      avatarColor: "bg-yellow-500",
+      date: "6 June 2025",
+      text: "Gaining a knowledge with just 2-3 mins videos with few modules, so basic and very easy to understand. This Apps mainly focus on the important point. about the subscription structure.. there is a saying NOTHING COMES FOR FREE."
+    },
+    {
+      id: 10,
+      name: "Priya Gupta",
+      initial: "P",
+      avatarColor: "bg-rose-500",
+      date: "29 June 2025",
+      text: "best app for learning basics in makeup artistry u can start your journey from here ✨"
     }
   ];
 

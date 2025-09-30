@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import localFont from "next/font/local";
 
 const geistSans = localFont({
@@ -14,11 +15,11 @@ const geistMono = localFont({
 });
 
 export default function Home() {
+  const router = useRouter();
 
   useEffect(() => {
-   
-      window.location.href = 'https://play.google.com/store/apps/details?id=com.zudo';
-   
+      // For external URLs, use window.open to open in new tab
+      window.open('https://play.google.com/store/apps/details?id=com.zudo', '_blank');
   }, []);
   return (
     <div
